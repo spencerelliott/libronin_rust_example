@@ -1,0 +1,7 @@
+/target
+.idea/
+*.out
+*.rox
+*.map
+*.dump
+.DS_Store
