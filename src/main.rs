@@ -7,7 +7,7 @@ use crate::serial::Serial;
 use crate::time::Time;
 
 #[no_mangle]
-pub extern "C" fn main() {
+pub extern "C" fn main() -> u32 {
     Serial::init(56700);
 
     Time::usleep(1500000);
@@ -17,4 +17,6 @@ pub extern "C" fn main() {
     Serial::report("Another test fun for funsies\n\r");
 
     Time::usleep(2000);
+
+    return 0;
 }
