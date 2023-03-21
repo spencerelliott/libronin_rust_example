@@ -1,7 +1,7 @@
 [env]
 GCCRS_CUSTOM_BIN = "sh-elf-gccrs"
 GCCRS_PRELINK_OBJS = "libs/crt0.o"
-GCCRS_EXTRA_ARGS = "-Wl,-Ttext=0x8c010000 -Wl,-Map=output.map -nostartfiles -nostdlib -L/opt/toolchains/dc-gcc13/sh-elf/lib/gcc/sh-elf/13.0.0 -Llibs/ -lronin -lgcc"
+GCCRS_EXTRA_ARGS = "-Wl,-Ttext=0x8c010000 -Wl,-Map=output.map -nostartfiles -nostdlib -Llibs/ -lz -lronin -lgcc -lc"
 
 [build]
 rustflags = ""
